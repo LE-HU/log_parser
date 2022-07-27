@@ -18,10 +18,11 @@ Invoke CLI help:
     -f, --file FILE                  Specify log file
                                      Lists all views by default
     -u, --uniq                       List unique views
-    -h, --help                       Prints this help
 ```
 
-## Example call
+additionaly one can use `-h` or `--help` for help prompt.
+
+### Example call
 Root directory contains example `webserver.log` log file.
 
 ```bash
@@ -39,7 +40,7 @@ Root directory contains example `webserver.log` log file.
 ## Development
 App includes couple gems inside `Gemfile` to help with development.
 
-## Run tests
+### Run tests
 
 In order to run RSpec tests one needs to execute:
 
