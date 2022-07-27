@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
-require_relative 'lib/parser'
+require_relative 'config/environment'
 
-Parser.new(options: Interface.new.options).parse
+Parser::Main.new(options: Interface.new.options).parse

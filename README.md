@@ -36,9 +36,12 @@ Root directory contains example `webserver.log` log file.
   6. /about ..........21 unique views
 ```
 
+## Development
+App includes couple gems inside `Gemfile` to help with development.
+
 ## Run tests
 
-In order to run RSpec tests one needs to execute
+In order to run RSpec tests one needs to execute:
 
 *RubyGems + bundler gem required*
 ```bash

@@ -1,11 +1,8 @@
 # frozen_string_literal: true
 
-require_relative '../lib/interface'
-require 'pry'
-
 describe Interface do
   before(:all) do
-    Object.send(:remove_const, :ARGV)
+    Object.send(:remove_const, :ARGV) if ARGF.argv.include?('spec/unit/main_spec.rb')
   end
 
   before do

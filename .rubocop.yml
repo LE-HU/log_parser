@@ -1,0 +1,17 @@
+AllCops:
+  NewCops: enable
+
+Lint/ConstantDefinitionInBlock:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Style/Documentation:
+  Enabled: false
+
+Style/MutableConstant:
+  Exclude:
+    - 'spec/**/*.rb'
