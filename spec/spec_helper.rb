@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../config/environment'
+Bundler.require(:test)
 
 RSPEC_ROOT = File.dirname(__FILE__)
 

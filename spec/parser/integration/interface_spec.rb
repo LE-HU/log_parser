@@ -2,7 +2,8 @@
 
 describe Interface do
   before(:all) do
-    Object.send(:remove_const, :ARGV) if ARGF.argv.include?('spec/unit/main_spec.rb')
+    # ARGV differs wether we run all specs or this file using relative path
+    Object.send(:remove_const, :ARGV) if ARGF.argv.include?('spec/parser/integration/interface_spec.rb')
   end
 
   before do
@@ -15,12 +16,12 @@ describe Interface do
 
   describe '#options' do
     before do
-      ARGV = ['-f', 'specs/fixtures/example.log']
+      ARGV = ['-f', 'specs/fixtures/example.log', '-u']
     end
 
-    it 'parses options input via the cli' do
+    it 'parses options properly' do
       options = Interface.new.options
-      expect(options).to eq({ file: 'specs/fixtures/example.log' })
+      expect(options).to eq({ file: 'specs/fixtures/example.log', uniq: true })
     end
   end
 

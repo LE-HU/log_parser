@@ -7,23 +7,23 @@ module Parser
     end
 
     def parse
-      Parser::Printer.new(data: sorted_views, uniq: options[:uniq]).print
+      Parser::Printer.new(data: sorted_views, uniq: options[:uniq]).call
     end
 
     private
 
-    attr_accessor :options
+    attr_reader :options
 
     def sorted_views
-      @sorted_views ||= Parser::Sorter.new(views: views).sort
+      Parser::Sorter.new(views: views).call
     end
 
     def views
-      @views ||= Parser::Counter.new(log: log, uniq: options[:uniq]).count
+      Parser::Counter.new(log: log, uniq: options[:uniq]).call
     end
 
     def log
-      @log ||= Parser::FileHandler.new(filepath: options[:file]).open
+      Parser::FileHandler.new(filepath: options[:file]).call
     end
   end
 end

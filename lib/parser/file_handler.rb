@@ -8,7 +8,7 @@ module Parser
       @filepath = filepath
     end
 
-    def open
+    def call
       if filepath
         File.open(filepath)
       else

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 describe Parser::Sorter do
-  describe '#sort' do
+  describe '#call' do
     let(:views) do
       {
         '/contact' => 1,
@@ -19,7 +19,7 @@ describe Parser::Sorter do
     end
 
     it 'returns hash sorted by values descending' do
-      expect(described_class.new(views: views).sort).to eq(sorted_views)
+      expect(described_class.new(views: views).call).to eq(sorted_views)
     end
   end
 end

@@ -6,7 +6,7 @@ module Parser
       @views = views
     end
 
-    def sort
+    def call
       views.sort_by { |_k, v| -v }
     end
 

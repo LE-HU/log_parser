@@ -7,7 +7,7 @@ module Parser
       @uniq = uniq
     end
 
-    def count
+    def call
       uniq.nil? ? all_views : uniq_views
     end
 

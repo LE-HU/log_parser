@@ -7,7 +7,7 @@ module Parser
       @uniq = uniq
     end
 
-    def print
+    def call
       adjective = (uniq.nil? ? '' : 'unique ')
 
       puts "List of webpages with most #{adjective}views:"

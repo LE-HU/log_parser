@@ -11,7 +11,7 @@ Built using ruby 3.1.2.
 ## Usage
 
 Invoke CLI help:
-`ruby parse.rb` or `ruby parse.rb -h`
+`./bin/parse`
 
 ```bash
   Usage: parse.rb [options]
