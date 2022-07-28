@@ -27,7 +27,7 @@ When no flags are passed, the program falls back to treat the first CLI argument
 Root directory contains example `webserver.log` log file.
 
 ```bash
-  ruby parse.rb -f webserver.log -u
+  ./bin/parse -f webserver.log -u
 
   List of webpages with most unique views:
   1. /help_page/1 ....23 unique views
