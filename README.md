@@ -14,7 +14,7 @@ Invoke CLI help:
 `./bin/parse`
 
 ```bash
-  Usage: parse.rb [options]
+  Usage: parse [options]
     -f, --file FILE                  Specify log file
                                      Lists all views by default
     -u, --uniq                       List unique views
