@@ -22,6 +22,8 @@ module Parser
         hash[path] << ip unless hash[path].include? ip
       end
 
+      log.close
+
       list.each { |path, ip_array| list[path] = ip_array.size }
     end
 
