@@ -10,7 +10,9 @@ module Parser
     end
 
     def call
-      uniq.nil? ? all_views : uniq_views
+      views = (uniq.nil? ? all_views : uniq_views)
+      log.close
+      views
     rescue StandardError
       puts INVALID_DATA
       exit

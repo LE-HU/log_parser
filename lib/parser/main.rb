@@ -8,7 +8,6 @@ module Parser
 
     def parse
       Parser::Printer.new(data: sorted_views, uniq: options[:uniq]).call
-      log.close
     end
 
     private
