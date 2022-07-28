@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'optparse'
-require 'pry'
 
 class Interface
   INVALID_OPTION = 'Option not supported. Please see --help for available options.'
