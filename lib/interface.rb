@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'optparse'
+require 'pry'
 
 class Interface
   INVALID_OPTION = 'Option not supported. Please see --help for available options.'
@@ -16,7 +17,8 @@ class Interface
   private
 
   def user_options
-    argv_parser.parse!(into: options)
+    non_option_arguments = argv_parser.parse!(into: options)
+    options.merge!({ file: ARGV[0] }) unless non_option_arguments.empty?
   rescue OptionParser::InvalidOption
     puts INVALID_OPTION
     exit

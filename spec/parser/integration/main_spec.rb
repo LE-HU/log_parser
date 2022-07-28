@@ -17,7 +17,7 @@ describe Parser::Main do
 
     describe 'without any flag' do
       before do
-        ARGV = ['-f', 'spec/parser/fixtures/example.log']
+        ARGV = ['-f', 'spec/parser/fixtures/valid.log']
       end
 
       it 'prints list of webpages with most views' do
@@ -28,7 +28,7 @@ describe Parser::Main do
 
     describe 'with unique flag' do
       before do
-        ARGV = ['-f', 'spec/parser/fixtures/example.log', '-u']
+        ARGV = ['-f', 'spec/parser/fixtures/valid.log', '-u']
       end
 
       it 'prints list of webpages with most unique views' do

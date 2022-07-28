@@ -21,6 +21,7 @@ Invoke CLI help:
 ```
 
 additionaly one can use `-h` or `--help` for help prompt.
+When no flags are passed, the program falls back to treat the first CLI argument as a filename.
 
 ### Example call
 Root directory contains example `webserver.log` log file.

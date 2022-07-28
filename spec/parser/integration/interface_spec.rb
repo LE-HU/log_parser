@@ -16,12 +16,12 @@ describe Interface do
 
   describe '#options' do
     before do
-      ARGV = ['-f', 'specs/fixtures/example.log', '-u']
+      ARGV = ['-f', 'specs/fixtures/valid.log', '-u']
     end
 
     it 'parses options properly' do
       options = Interface.new.options
-      expect(options).to eq({ file: 'specs/fixtures/example.log', uniq: true })
+      expect(options).to eq({ file: 'specs/fixtures/valid.log', uniq: true })
     end
   end
 
@@ -37,7 +37,7 @@ describe Interface do
 
   describe 'wrong option passed as ARGV' do
     before do
-      ARGV = ['-f', 'specs/fixtures/example.log', '-rb']
+      ARGV = ['-f', 'specs/fixtures/valid.log', '-rb']
     end
 
     it 'exits the program' do
